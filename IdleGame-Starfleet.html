@@ -9,28 +9,30 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- 引入本地CSS文件 -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_Buttons.css">
 </head>
 
 <body>
     <div class="head">
         <h1>舰队</h1>
-        <p>这是一个示例段落。</p>
+        <p>这是一个示例段落。<a href="https://docs.qq.com/sheet/DR1pYRWpKZFlCR1Vs" target="_blank">数据设计</a></p>
+        </p>
     </div>
 
     <div class="tabs">
         <ul class="tab-links">
-            <li class="active"><a href="#tab1">页面1</a></li>
-            <li><a href="#tab2">页面2</a></li>
-            <li><a href="#tab3">页面3</a></li>
-            <li><a href="#tab4">页面4</a></li>
-            <li><a href="#tab99">页面99</a></li>
+            <li class="active"><a href="#tab1">主要</a></li>
+            <li><a href="#tab2">星系</a></li>
+            <li><a href="#tab3">科技</a></li>
+            <li><a href="#tab4">暂定</a></li>
+            <li><a href="#tabEnd">设置</a></li>
         </ul>
         <div class="tab-content">
             <div id="tab1" class="tab active">
                 <div class="tab1-box">
-                    <div class="box box-1">1</div>
-                    <div class="box box-2">2</div>
-                    <div class="box box-3">3</div>
+                    <div class="box box-1" id="main-button"></div>
+                    <div class="box box-2" id="main-table">1</div>
+                    <div class="box box-3" id="main-info">3</div>
                 </div>
                 <h2>Tab 1 Content</h2>
                 <p>这里是第一个页签的内容。</p>
@@ -47,14 +49,17 @@
                 <h2>Tab 4 Content</h2>
                 <p>这里是第444个页签的内容。</p>
             </div>
-            <div id="tab99" class="tab">
-                <h2>Tab 5 Content</h2>
-                <p>这里是最后页签的内容。</p>
+            <div id="tabEnd" class="tab">
+                <h2>设置页</h2>
+                <p>这里是最后页签的内容。用来设置参数</p>
             </div>
         </div>
     </div>
     <!-- 引入本地JavaScript文件 -->
     <script src="js/main.js"></script>
+    <script src="js/Resource.js"></script>
+    <script src="js/ItemControl.js"></script>
+    <script src="js/ButtonFunction_01.js"></script>
 </body>
 
 </html>
