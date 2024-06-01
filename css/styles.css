@@ -69,7 +69,7 @@ body {
 
 .tab1-box {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     height: calc(100% - 20px);
 }
@@ -85,6 +85,7 @@ a {
     font-weight: bold;
 }
 
+
 /* 当屏幕宽度大于1024px时 */
 @media (min-width: 1024px) {
 
@@ -96,17 +97,25 @@ a {
     .box:nth-child(3) {
         width: 23%;
     }
+
+    .box:nth-child(2) {
+        min-width: 275px;
+    }
 }
 
 /* 当屏幕宽度小于768px时 */
 @media (max-width: 1024px) {
+    .box:nth-child(1) {
+        width: calc(100% - 320px);
+    }
 
-    .box:nth-child(1),
+    .box:nth-child(2),
     .box:nth-child(3) {
         width: 160px;
     }
 
     .box:nth-child(2) {
-        width: calc(100% - 320px);
+        min-width: 215px;
     }
+
 }

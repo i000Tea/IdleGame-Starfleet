@@ -2,14 +2,12 @@ let BtnDictionary = {};
 
 function NewBtn(inputBtnId) {
     if (inputBtnId in BtnDictionary) {
-        console.info(`已添加过${inputBtnId}`);
+        console.info(`已添加过按钮${inputBtnId}`);
         return;
     }
 
     let getItem = getDataByBtnID(inputBtnId);
     console.log(getItem)
-
-
 
     // 创建一个新的按钮元素
     let newButton = $('<button></button>')
@@ -35,11 +33,11 @@ function ButtonClick(btnID) {
     switch (btnID) {
         case "getMetal":
             console.log("点击获取金属");
-            ResAdd("Metal", 1);
+            ResAdd("metal", 1);
             break;
         case "getFuel01":
             console.log("点击获取燃料");
-            ResAdd("Fuel01", 1);
+            ResAdd("fuel01", 1);
             break;
         default:
             console.log("执行默认操作");

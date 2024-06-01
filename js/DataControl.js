@@ -44,12 +44,14 @@ function LoadOver() {
     NewBtn("getFuel01");
     NewBtn("getFuel01");
     NewBtn("getMetal");
+    NewRes("metal");
 }
 
 
 // 定义一个函数来搜索并返回匹配的数据
 function getDataByResID(inputResID) {
     if (inputResID.trim() === "") {
+        console.log(`未获取到任何对象 ${inputResID}`);
         return null; // 如果输入为空，则返回null
     }
     return $.grep(jsonData_Btn, function (item) {

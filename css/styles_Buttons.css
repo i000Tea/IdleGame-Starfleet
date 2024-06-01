@@ -1,6 +1,7 @@
 /* 定义按钮类的基本样式 */
 .base-btn {
-    padding: 12px 72px;
+    width: 200px;
+    padding: 12px 0;
     background-color: hsl(240, 8%, 20%);
     color: white;
     border: none;

@@ -1,0 +1,17 @@
+.res-list {
+    width: 100%;
+}
+
+#res-list-box>tr {
+    width: 100%;
+}
+
+.res-name {
+    text-align: left;
+    width: 120px;
+}
+.res-speed,
+.res-story {
+    text-align: right;
+    width: 60px;
+}
