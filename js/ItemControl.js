@@ -1,6 +1,5 @@
 
 
-
 function NewBtn(btnText, btnId) {
     // 创建一个新的按钮元素
     let newButton = $('<button></button>')

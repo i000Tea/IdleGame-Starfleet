@@ -1,0 +1,27 @@
+[
+    {
+        "ResItem": "money",
+        "textZh": "货币",
+        "textEn": "money"
+    },
+    {
+        "ResItem": "metal",
+        "textZh": "金属",
+        "textEn": "metal"
+    },
+    {
+        "ResItem": "part",
+        "textZh": "机械零件",
+        "textEn": "machinePart"
+    },
+    {
+        "ResItem": "steelPlate",
+        "textZh": "钢板",
+        "textEn": "steelPlate"
+    },
+    {
+        "ResItem": "fuel01",
+        "textZh": "化学燃料",
+        "textEn": "fuel"
+    }
+]
