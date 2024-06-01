@@ -1,11 +1,3 @@
-$(document).ready(function () {
-    $('#main-button').text('');
-    for (let i = 0; i < 10; i++) {
-        NewBtn(`按钮${i}`);
-
-    }
-});
-
 function NewBtn(buttonText) {
     // 创建一个新的按钮元素
     let newButton = $('<button></button>')

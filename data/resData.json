@@ -1,26 +1,26 @@
 [
     {
-        "ResItem": "money",
+        "resID": "money",
         "textZh": "货币",
         "textEn": "money"
     },
     {
-        "ResItem": "metal",
+        "resID": "metal",
         "textZh": "金属",
         "textEn": "metal"
     },
     {
-        "ResItem": "part",
+        "resID": "part",
         "textZh": "机械零件",
         "textEn": "machinePart"
     },
     {
-        "ResItem": "steelPlate",
+        "resID": "steelPlate",
         "textZh": "钢板",
         "textEn": "steelPlate"
     },
     {
-        "ResItem": "fuel01",
+        "resID": "fuel01",
         "textZh": "化学燃料",
         "textEn": "fuel"
     }
