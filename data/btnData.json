@@ -1,12 +1,7 @@
 [
     {
-        "name": "Example Name 1",
-        "value1": "123",
-        "value2": "456"
-    },
-    {
-        "name": "Example Name 2",
-        "value1": "789",
-        "value2": "012"
+        "BtnItem": "getMetal",
+        "textZh": "获取金属",
+        "textEn": "getMetal"
     }
 ]
