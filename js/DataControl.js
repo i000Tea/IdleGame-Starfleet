@@ -43,3 +43,23 @@ function LoadOver(){
     console.log("LoadOver");
     NewBtn();
 }
+
+
+// 定义一个函数来搜索并返回匹配的数据
+function getDataByResItem(inputResID) {
+    if (inputResID.trim() === "") {
+        return null; // 如果输入为空，则返回null
+    }
+    return $.grep(jsonData_Btn, function(item) {
+        return item.resID === inputResID;
+    })[0];
+}
+// 定义一个函数来搜索并返回匹配的数据
+function getDataByResItem(inputBtnID) {
+    if (inputBtnID.trim() === "") {
+        return null; // 如果输入为空，则返回null
+    }
+    return $.grep(jsonData_Res, function(item) {
+        return item.btnID === inputBtnID;
+    })[0];
+}

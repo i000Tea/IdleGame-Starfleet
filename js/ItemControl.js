@@ -1,10 +1,8 @@
 
 
 function NewBtn(inputBtnId) {
-    // 使用jq的grep函数来查找具有特定ResItem值的对象
-    let getItem = $.grep(jsonData_Btn, function (item) {
-        return item.btnID === inputBtnId; // 替换 "metal" 为你要查找的ResItem值
-    });
+
+    let getItem = getDataByBtnItem(inputBtnId);
     console.log(getItem)
 
     // 创建一个新的按钮元素
