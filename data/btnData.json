@@ -1,7 +1,12 @@
 [
     {
-        "BtnItem": "getMetal",
+        "btnID": "getMetal",
         "textZh": "获取金属",
         "textEn": "getMetal"
+    },
+    {
+        "btnID": "getFuel01",
+        "textZh": "获取燃料",
+        "textEn": "getFuel01"
     }
 ]

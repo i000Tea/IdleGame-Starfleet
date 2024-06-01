@@ -1,14 +1,17 @@
 
 
-function NewBtn(btnText, btnId) {
-
-
+function NewBtn(inputBtnId) {
+    // 使用jq的grep函数来查找具有特定ResItem值的对象
+    let getItem = $.grep(jsonData_Btn, function (item) {
+        return item.btnID === inputBtnId; // 替换 "metal" 为你要查找的ResItem值
+    });
+    console.log(getItem)
 
     // 创建一个新的按钮元素
     let newButton = $('<button></button>')
-        .text(btnText)
-        .attr('id', btnId)
-        .attr('data-btnId', btnId)  // 添加 data-btnId 属性
+        .text(getItem.textZh)
+        .attr('id', inputBtnId)
+        .attr('data-btnId', inputBtnId)  // 添加 data-btnId 属性
         .addClass('base-btn');  // 添加一个类
 
     // 将新按钮添加到id为main-button的元素中
