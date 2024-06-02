@@ -60,11 +60,11 @@ function ButtonClick(btnID) {
             ResAdd("fuel01", 1);
             break;
         default:
-            console.log("执行默认操作");
+            console.log(`未获取正确类型 ${btnID}`);
     }
     BtnOpenSelect();
 }
 // ============================================================================================================
-function Select() {
+function BtnOpenSelect() {
 
 }

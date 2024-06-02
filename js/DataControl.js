@@ -24,17 +24,15 @@ $(document).ready(function () {
 
 function LoadData(jsonName) {
     return new Promise(function (resolve, reject) {
-        // 如果本地存储中没有缓存数据，则发送 AJAX 请求获取数据
         $.getJSON(`${path}${jsonName}.json`, function (data) {
             // console.log("拉取GitHub");
-            // 将获取到的数据存储到本地存储中
             localStorage.setItem('cachedData', JSON.stringify(data));
             console.log(data);
-            resolve(data); // 成功获取数据，调用resolve函数
+            resolve(data); 
         }).fail(function (jqxhr, textStatus, error) {
             let err = textStatus + ", " + error;
             console.error("请求失败: " + err);
-            reject(error); // 获取数据失败，调用reject函数
+            reject(error); 
         });
     });
 }
