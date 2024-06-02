@@ -56,7 +56,7 @@ function ButtonClick(btnID) {
             ResAdd("fuel01", 1);
             break;
         case "make_metalPlate":
-            console.log("点击获取燃料");
+            console.log("点击制作金属板");
             ResAdd("fuel01", 1);
             break;
         default:

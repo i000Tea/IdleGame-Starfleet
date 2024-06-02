@@ -10,6 +10,11 @@
         "textEn": "metal"
     },
     {
+        "resID": "metalPlate",
+        "textZh": "金属板",
+        "textEn": "metalPlate"
+    },
+    {
         "resID": "part",
         "textZh": "机械零件",
         "textEn": "machinePart"
