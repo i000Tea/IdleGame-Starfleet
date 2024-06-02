@@ -8,14 +8,13 @@ function AwakeBtn() {
         item.hide();
     }
 }
-function NewResByID(inputBtnId) {
+function GetBtnByID(inputBtnId) {
     if (inputBtnId in BtnDictionary) {
-        BtnDictionary[inputBtnId].show();
+        return BtnDictionary[inputBtnId].show();
         // console.info(`已添加过${inputBtnId}`);
-        return;
     }
     let iBtnData = getDataByResID(inputBtnId);
-    NewRes(iBtnData);
+    return GetBtn(iBtnData);
 }
 
 function GetBtn(inputBtn) {
@@ -69,7 +68,7 @@ function ButtonClick(btnID) {
 function BtnOpenSelect() {
     if (!on_make_metalPlate) {
         if (ResSatisfy("metal", 10)) {
-            GetBtn("make_metalPlate").show();
+            GetBtnByID("make_metalPlate").show();
             on_make_metalPlate = true;
         }
     }

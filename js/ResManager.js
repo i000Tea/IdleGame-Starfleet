@@ -4,22 +4,22 @@ function AwakeRes() {
     for (let i = 0; i < jsonData_Res.length; i++) {
         // console.log(`inf:${i}`);
         // console.log(jsonData_Res[i]);
-        let item = NewRes(jsonData_Res[i]);
+        let item = GetRes(jsonData_Res[i]);
         item.newResLine.hide();
     }
 }
 
-function NewResByID(inputResID) {
+function GetResByID(inputResID) {
     if (inputResID in resDictionary) {
         resDictionary[inputResID].show();
         // console.info(`已添加过${inputBtnId}`);
         return;
     }
     let iResData = getDataByResID(inputResID);
-    NewRes(iResData);
+    GetRes(iResData);
 }
 
-function NewRes(iResData) {
+function GetRes(iResData) {
 
     if (iResData.resID in resDictionary) {
         // console.info(`已添加过${inputBtnId}`);
@@ -53,7 +53,7 @@ function ResAdd(inputResID, addValue) {
     }
     else {
         // console.info(`添加新的${inputResID}`);
-        res = NewRes(inputResID);
+        res = GetRes(inputResID);
     }
     // console.log(res);
     res.resValue += addValue;

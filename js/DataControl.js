@@ -43,7 +43,7 @@ function LoadOver() {
     // NewResByID("getFuel01");
     AwakeRes();
     AwakeBtn();
-    NewResByID("get_metal");
+    GetBtnByID("get_metal");
     // NewResByID("metal");
 }
 
