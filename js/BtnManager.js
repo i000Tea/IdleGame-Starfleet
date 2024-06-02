@@ -4,7 +4,7 @@ function AwakeBtn() {
     for (let i = 0; i < jsonData_Btn.length; i++) {
         // console.log(`inf:${i}`);
         // console.log(jsonData_Btn[i]);
-        let item = NewBtn(jsonData_Btn[i]);
+        let item = GetBtn(jsonData_Btn[i]);
         item.hide();
     }
 }
@@ -18,7 +18,7 @@ function NewResByID(inputBtnId) {
     NewRes(iBtnData);
 }
 
-function NewBtn(inputBtn) {
+function GetBtn(inputBtn) {
     if (inputBtn.btnID in BtnDictionary) {
         // console.info(`已添加过按钮${inputBtn.btnID}`);
         return;
@@ -56,15 +56,34 @@ function ButtonClick(btnID) {
             ResAdd("fuel01", 1);
             break;
         case "make_metalPlate":
-            console.log("点击制作金属板");
-            ResAdd("fuel01", 1);
+            TryMake_metalPlate();
+
             break;
         default:
             console.log(`未获取正确类型 ${btnID}`);
     }
     BtnOpenSelect();
 }
+
 // ============================================================================================================
 function BtnOpenSelect() {
+    if (!on_make_metalPlate) {
+        if (ResSatisfy("metal", 10)) {
+            GetBtn("make_metalPlate").show();
+            on_make_metalPlate = true;
+        }
+    }
+}
 
+// Make_metalPlate ============================================================================================================
+let on_make_metalPlate = false;
+function TryMake_metalPlate() {
+    if (ResSatisfy("metal", 10)) {
+        console.log("点击制作金属板");
+        ResAdd("metal", -10)
+        ResAdd("metalPlate", 1);
+    }
+    else {
+        console.log("资源不足，扣除失败");
+    }
 }

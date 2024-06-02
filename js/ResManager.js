@@ -60,3 +60,14 @@ function ResAdd(inputResID, addValue) {
     res.newResLine.find('.res-story').text(res.resValue);
     // console.log(res);
 }
+
+function ResSatisfy(inputResID, satisfyValue) {
+    if (inputResID in resDictionary) {
+        // console.info(`数据增加时 已添加过${inputResID}`);
+        resDictionary[inputResID].newResLine.show();
+        let res = resDictionary[inputResID];
+        return res.resValue >= satisfyValue;
+    } else {
+        return false;
+    }
+}
