@@ -1,19 +1,34 @@
 let BtnDictionary = {};
 
-function NewBtn(inputBtnId) {
+function AwakeBtn() {
+    for (let i = 0; i < jsonData_Btn.length; i++) {
+        // console.log(`inf:${i}`);
+        // console.log(jsonData_Btn[i]);
+        let item = NewBtn(jsonData_Btn[i]);
+        item.hide();
+    }
+}
+function NewResByID(inputBtnId) {
     if (inputBtnId in BtnDictionary) {
-        console.info(`已添加过按钮${inputBtnId}`);
+        BtnDictionary[inputBtnId].show();
+        // console.info(`已添加过${inputBtnId}`);
+        return;
+    }
+    let iBtnData = getDataByResID(inputBtnId);
+    NewRes(iBtnData);
+}
+
+function NewBtn(inputBtn) {
+    if (inputBtn.btnID in BtnDictionary) {
+        // console.info(`已添加过按钮${inputBtn.btnID}`);
         return;
     }
 
-    let getItem = getDataByBtnID(inputBtnId);
-    console.log(getItem)
-
     // 创建一个新的按钮元素
     let newButton = $('<button></button>')
-        .text(getItem.textZh)
-        .attr('id', inputBtnId)
-        .attr('data-btnId', inputBtnId)  // 添加 data-btnId 属性
+        .text(inputBtn.textZh)
+        .attr('id', inputBtn.btnID)
+        .attr('data-btnId', inputBtn.btnID)  // 添加 data-btnId 属性
         .addClass('base-btn');  // 添加一个类
 
     // 将新按钮添加到id为main-button的元素中
@@ -24,23 +39,32 @@ function NewBtn(inputBtnId) {
         ButtonClick($(this).attr('data-btnId'));
     });
 
-    BtnDictionary[inputBtnId] = newButton;
+    BtnDictionary[inputBtn.btnID] = newButton;
 
     return newButton;
 }
 
 function ButtonClick(btnID) {
+
     switch (btnID) {
-        case "getMetal":
+        case "get_metal":
             console.log("点击获取金属");
             ResAdd("metal", 1);
             break;
-        case "getFuel01":
+        case "get_fuel01":
+            console.log("点击获取燃料");
+            ResAdd("fuel01", 1);
+            break;
+        case "make_metalPlate":
             console.log("点击获取燃料");
             ResAdd("fuel01", 1);
             break;
         default:
             console.log("执行默认操作");
     }
+    BtnOpenSelect();
 }
+// ============================================================================================================
+function Select() {
 
+}

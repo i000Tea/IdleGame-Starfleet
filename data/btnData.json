@@ -1,12 +1,20 @@
 [
     {
-        "btnID": "getMetal",
+        "btnID": "get_metal",
+        "btnLocal": "1",
         "textZh": "获取金属",
-        "textEn": "getMetal"
+        "textEn": "get_metal"
     },
     {
-        "btnID": "getFuel01",
+        "btnID": "get_fuel01",
+        "btnLocal": "1",
         "textZh": "获取燃料",
-        "textEn": "getFuel01"
+        "textEn": "get_fuel01"
+    },
+    {
+        "btnID": "make_metalPlate",
+        "btnLocal": "2",
+        "textZh": "制作金属板",
+        "textEn": "make_metalPlate"
     }
 ]
